@@ -69,7 +69,6 @@ class TensorAttentionBlock(nn.Module):
         self.mode = mode
         self.mta = MaskedTensorAttention(d_model, num_head, mode, dropout)
         self.norm = nn.LayerNorm(d_model)
-        self.norm2 = nn.LayerNorm(d_model)
         self.dropout = nn.Dropout(dropout)
         self.norm_before = norm_before
 

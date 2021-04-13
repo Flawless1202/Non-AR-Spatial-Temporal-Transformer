@@ -25,8 +25,6 @@ class SpatialTemporalEncoder(nn.Module):
 
         self.embed_only_first = embed_only_first
 
-        self.norm = nn.LayerNorm(d_model)
-
         self.encoder_stack = nn.ModuleList([
             EncoderLayer(num_head, d_model, d_hid, activation=activation,
                          dropout=dropout, norm_before=norm_before,
